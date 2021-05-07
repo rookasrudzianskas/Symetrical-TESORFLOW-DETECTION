@@ -15,3 +15,9 @@ print(train_labels[0])
 
 plt.imshow(train_images[0], cmap='gray', vmin=0, vmax=255)
 plt.show()
+
+#  Defining our net structure
+model = keras.Sequential([
+    # Flattens to one big layer of images
+    keras.layers.Flatten(input_shape(28, 28)),
+])
