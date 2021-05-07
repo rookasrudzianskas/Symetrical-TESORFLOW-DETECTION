@@ -27,3 +27,5 @@ model = keras.Sequential([
     # output is -=10 return maximum
     keras.layers.Dense(units=10, activation=tf.nn.softmax)
 ])
+
+model.compile(optimizer=tf.optimizers.Adam(), loss='sparse_categorical_crossentropy')
