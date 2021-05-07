@@ -20,4 +20,10 @@ plt.show()
 model = keras.Sequential([
     # Flattens to one big layer of images
     keras.layers.Flatten(input_shape(28, 28)),
+
+    #
+    keras.layers.Dense(units=128, activation=tf.nn.relu),
+
+    # output is -=10 return maximum
+    keras.layers.Dense(units=10, activation=tf.nn.softmax)
 ])
