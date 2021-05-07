@@ -19,7 +19,7 @@ plt.show()
 #  Defining our net structure
 model = keras.Sequential([
     # Flattens to one big layer of images
-    keras.layers.Flatten(input_shape(28, 28)),
+    keras.layers.Flatten(input_shape=(28, 28)),
 
     #
     keras.layers.Dense(units=128, activation=tf.nn.relu),
