@@ -23,13 +23,14 @@ model = keras.Sequential([
 
     #
     keras.layers.Dense(units=128, activation=tf.nn.relu),
+    keras.layers.Dense(units=64, activation=tf.nn.relu),
 
     # output is -=10 return maximum
     keras.layers.Dense(units=10, activation=tf.nn.softmax)
 ])
 
 # Compiling the model, ready for training
-model.compile(optimizer=tf.optimizers.Adam(), loss='sparse_categorical_crossentropy')
+model.compile(optimizer=tf.optimizers.Adam(), loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
 # epoch is times going per one image
 model.fit(train_images, train_labels, epochs=5)
