@@ -40,10 +40,11 @@ test_loss = model.evaluate(test_images, test_labels)
 plt.imshow(test_images[0], cmap='gray', vmin=0, vmax=255)
 plt.show()
 
-print(test_labels[0])
-
 # Make the predictions
 predictions = model.predict(test_images)
 
-print(predictions[0])
+print(list(predictions[1]).index(max(predictions[1])))
+print(test_labels[0])
+
+# print(predictions[0])
 # print(predictions[0])
