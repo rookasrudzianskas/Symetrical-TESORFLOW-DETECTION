@@ -13,8 +13,8 @@ fashion_mnist = keras.datasets.fashion_mnist
 
 print(train_labels[0])
 
-plt.imshow(train_images[0], cmap='gray', vmin=0, vmax=255)
-plt.show()
+# plt.imshow(train_images[40000], cmap='gray', vmin=0, vmax=255)
+# plt.show()
 
 #  Defining our net structure
 model = keras.Sequential([
@@ -33,3 +33,17 @@ model.compile(optimizer=tf.optimizers.Adam(), loss='sparse_categorical_crossentr
 
 # epoch is times going per one image
 model.fit(train_images, train_labels, epochs=5)
+
+# Testing models
+test_loss = model.evaluate(test_images, test_labels)
+
+plt.imshow(test_images[1], cmap='gray', vmin=0, vmax=255)
+plt.show()
+
+print(test_labels[1])
+
+# Make the predictions
+# predictions = model.predict(test_images)
+
+# print(predictions[0])
+# print(predictions[0])
