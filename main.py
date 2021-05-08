@@ -28,4 +28,7 @@ model = keras.Sequential([
     keras.layers.Dense(units=10, activation=tf.nn.softmax)
 ])
 
+# Compiling the model, ready for training
 model.compile(optimizer=tf.optimizers.Adam(), loss='sparse_categorical_crossentropy')
+
+model.fit(train_images, train_labels, epochs=5)
