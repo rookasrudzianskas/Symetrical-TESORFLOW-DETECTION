@@ -33,7 +33,7 @@ model = keras.Sequential([
 model.compile(optimizer=tf.optimizers.Adam(), loss='sparse_categorical_crossentropy', metrics=['accuracy'])
 
 # epoch is times going per one image
-model.fit(train_images, train_labels, epochs=5)
+model.fit(train_images, train_labels, epochs=50)
 
 # Testing models
 test_loss = model.evaluate(test_images, test_labels)
