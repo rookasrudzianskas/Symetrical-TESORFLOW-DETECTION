@@ -43,7 +43,7 @@ plt.show()
 # Make the predictions
 predictions = model.predict(test_images)
 
-print(list(predictions[1]).index(max(predictions[1])))
+print(list(predictions[0]).index(max(predictions[0])))
 print(test_labels[0])
 
 # print(predictions[0])
